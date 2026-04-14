@@ -16,7 +16,7 @@ A diffusion-based EEG foundation model for seizure detection and seizure subtype
 |-------|------|---------|----------|
 | `best_EEGDIFF2.pth` | Diffusion backbone (pre-training) | THUSZ | [Download](https://lauedu74602-my.sharepoint.com/:u:/g/personal/abedelkader_helwan_lau_edu_lb/IQCvOrCk3Us8Sry9uUmBYtChAfJxYRlFvrFMA3Emr6fE8Wo?e=uszLoB) |
 | `best_classifier.pth` | Binary seizure detection (patient-wise) | THUSZ | [Download](https://lauedu74602-my.sharepoint.com/:u:/g/personal/abedelkader_helwan_lau_edu_lb/IQCvOrCk3Us8Sry9uUmBYtChAfJxYRlFvrFMA3Emr6fE8Wo?e=uszLoB) |
-| `best_classifier.pth` | Subtype classification (segment-wise, top-4 subtypes) | THUSZ | [Download](https://lauedu74602-my.sharepoint.com/:u:/g/personal/abedelkader_helwan_lau_edu_lb/IQDRXFfhnCuGQJs_lNO04lyUARYXKbudopQsfIkVruAvABY?e=XRo4hH) |
+| `best_top4_subtype.pth` | Subtype classification (segment-wise, top-4 subtypes) | THUSZ | [Download](https://lauedu74602-my.sharepoint.com/:u:/g/personal/abedelkader_helwan_lau_edu_lb/IQBXX6hTMhavQIYtks90HObsAVOBkX5oWSqmRB2M7y8tYpY?e=L4DjP6) |
 | `kall_unfrozen_best.pth` | Binary detection (normal vs abnormal) | TUAB | [Download](https://lauedu74602-my.sharepoint.com/:u:/g/personal/abedelkader_helwan_lau_edu_lb/IQD16KHZFE-ITrMuAe5pGmzaAZdQq-pQ0JSt27KP5lrV8zk?e=Jk29JF) |
 
 ---
