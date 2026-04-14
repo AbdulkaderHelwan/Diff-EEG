@@ -4,7 +4,9 @@ A diffusion-based EEG foundation model for seizure detection and seizure subtype
 
 ## Real-Time EEG Seizure Detection Demo
 
-<video src="https://github.com/abdulkader902017/Diff-EEG/raw/main/output.mp4" controls autoplay muted width="100%"></video>
+[![Watch Demo](demo_thumbnail.jpg)](https://github.com/abdulkader902017/Diff-EEG/blob/main/output.mp4)
+
+> Click the image above to watch the real-time seizure detection demo.
 
 ## Repository Structure
 
