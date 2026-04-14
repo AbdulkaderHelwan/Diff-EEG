@@ -1,0 +1,237 @@
+Loading normalization stats...
+✓ Loaded
+
+Using device: cuda
+
+======================================================================
+LOADING ALL SUBTYPES
+======================================================================
+
+Found 8 subtypes
+
+  subtype_01: 68,369 samples
+  subtype_02: 43,399 samples
+  subtype_03: 829 samples
+  subtype_04: 387 samples
+  subtype_05: 2,276 samples
+  subtype_06: 774 samples
+  subtype_07: 16,761 samples
+  subtype_08: 856 samples
+
+Subtype distribution (before deletion):
+  Subtype 04: 387 samples
+  Subtype 06: 774 samples
+  Subtype 03: 829 samples
+  Subtype 08: 856 samples
+  Subtype 05: 2,276 samples
+  Subtype 07: 16,761 samples
+  Subtype 02: 43,399 samples
+  Subtype 01: 68,369 samples
+
+Deleting subtypes [3, 4, 6] (lowest sample counts)
+
+✓ After deletion: 5 classes remaining
+
+Total samples: 131,661
+Final number of classes: 5
+  Class 0: 68,369 samples
+  Class 1: 43,399 samples
+  Class 2: 2,276 samples
+  Class 3: 16,761 samples
+  Class 4: 856 samples
+
+======================================================================
+CREATING STRATIFIED TRAIN/TEST SPLIT (80/20)
+======================================================================
+
+Train pool: 105,328 samples
+Test set: 26,333 samples
+  Class 0: 54,695 train, 13,674 test
+  Class 1: 34,719 train, 8,680 test
+  Class 2: 1,821 train, 455 test
+  Class 3: 13,408 train, 3,353 test
+  Class 4: 685 train, 171 test
+
+======================================================================
+COMPUTING FEASIBLE K VALUES
+======================================================================
+
+📊 Train set class sizes: ['54,695', '34,719', '1,821', '13,408', '685']
+📊 Smallest class size: 685 → Max K (half): 342
+🎯 Testing K values: [10, 50, 100, 200, 250, np.int64(342)]
+🎯 F1-Score target (minimum): ≥ 0.6
+
+======================================================================
+LOADING BACKBONE
+======================================================================
+
+Model initialized with 9,674,710 parameters
+✓ Loaded
+
+======================================================================
+RUNNING EXPERIMENTS: FROZEN vs UNFROZEN × K VALUES
+======================================================================
+
+
+======================================================================
+MODE: FROZEN
+======================================================================
+
+
+--- K=10 ---
+  Train samples: 50 (K=10 base + augmented)
+✓ Loaded pretrained classifier weights (except last layer) from /home/abdulh/scratch/seizure_clf_20260226_083908/best_classifier.pth
+✓ Replaced last classifier layer for 5-class output at index 8
+  → Early stop at epoch 44 (no improvement for 15 epochs)
+  ❌ Accuracy: 0.3442, F1: 0.3604 (target ≥ 0.6)
+      Params: 1,363,461/11,038,171 trainable/total
+
+--- K=50 ---
+    → Added 16 augmented samples for Class 2
+    → Added 16 augmented samples for Class 4
+  Train samples: 282 (K=50 base + augmented)
+✓ Loaded pretrained classifier weights (except last layer) from /home/abdulh/scratch/seizure_clf_20260226_083908/best_classifier.pth
+✓ Replaced last classifier layer for 5-class output at index 8
+  → Early stop at epoch 19 (no improvement for 15 epochs)
+  ❌ Accuracy: 0.3474, F1: 0.3433 (target ≥ 0.6)
+      Params: 1,363,461/11,038,171 trainable/total
+
+--- K=100 ---
+    → Added 20 augmented samples for Class 2
+    → Added 20 augmented samples for Class 4
+  Train samples: 540 (K=100 base + augmented)
+✓ Loaded pretrained classifier weights (except last layer) from /home/abdulh/scratch/seizure_clf_20260226_083908/best_classifier.pth
+✓ Replaced last classifier layer for 5-class output at index 8
+  → Early stop at epoch 16 (no improvement for 15 epochs)
+  ❌ Accuracy: 0.5099, F1: 0.3690 (target ≥ 0.6)
+      Params: 1,363,461/11,038,171 trainable/total
+      Per-class F1: ['0.683', '0.026', '0.148', '0.021', '0.102']
+
+--- K=200 ---
+    → Added 20 augmented samples for Class 2
+    → Added 20 augmented samples for Class 4
+  Train samples: 1,040 (K=200 base + augmented)
+✓ Loaded pretrained classifier weights (except last layer) from /home/abdulh/scratch/seizure_clf_20260226_083908/best_classifier.pth
+✓ Replaced last classifier layer for 5-class output at index 8
+  → Early stop at epoch 18 (no improvement for 15 epochs)
+  ❌ Accuracy: 0.5051, F1: 0.3868 (target ≥ 0.6)
+      Params: 1,363,461/11,038,171 trainable/total
+      Per-class F1: ['0.681', '0.068', '0.218', '0.045', '0.142']
+
+--- K=250 ---
+    → Added 20 augmented samples for Class 2
+    → Added 20 augmented samples for Class 4
+  Train samples: 1,290 (K=250 base + augmented)
+✓ Loaded pretrained classifier weights (except last layer) from /home/abdulh/scratch/seizure_clf_20260226_083908/best_classifier.pth
+✓ Replaced last classifier layer for 5-class output at index 8
+  → Early stop at epoch 16 (no improvement for 15 epochs)
+  ❌ Accuracy: 0.5060, F1: 0.3760 (target ≥ 0.6)
+      Params: 1,363,461/11,038,171 trainable/total
+      Per-class F1: ['0.683', '0.030', '0.177', '0.058', '0.155']
+
+--- K=342 ---
+    → Added 20 augmented samples for Class 2
+    → Added 20 augmented samples for Class 4
+  Train samples: 1,750 (K=342 base + augmented)
+✓ Loaded pretrained classifier weights (except last layer) from /home/abdulh/scratch/seizure_clf_20260226_083908/best_classifier.pth
+✓ Replaced last classifier layer for 5-class output at index 8
+  → Early stop at epoch 63 (no improvement for 15 epochs)
+  ❌ Accuracy: 0.5342, F1: 0.5075 (target ≥ 0.6)
+      Params: 1,363,461/11,038,171 trainable/total
+      Per-class F1: ['0.679', '0.395', '0.297', '0.144', '0.154']
+
+======================================================================
+MODE: UNFROZEN
+======================================================================
+
+
+--- K=10 ---
+  Train samples: 50 (K=10 base + augmented)
+✓ Loaded pretrained classifier weights (except last layer) from /home/abdulh/scratch/seizure_clf_20260226_083908/best_classifier.pth
+✓ Replaced last classifier layer for 5-class output at index 8
+  → Early stop at epoch 21 (no improvement for 15 epochs)
+  ❌ Accuracy: 0.4496, F1: 0.4287 (target ≥ 0.6)
+      Params: 3,975,813/11,038,171 trainable/total
+
+--- K=50 ---
+    → Added 16 augmented samples for Class 2
+    → Added 16 augmented samples for Class 4
+  Train samples: 282 (K=50 base + augmented)
+✓ Loaded pretrained classifier weights (except last layer) from /home/abdulh/scratch/seizure_clf_20260226_083908/best_classifier.pth
+✓ Replaced last classifier layer for 5-class output at index 8
+  → Early stop at epoch 16 (no improvement for 15 epochs)
+  ❌ Accuracy: 0.5053, F1: 0.3642 (target ≥ 0.6)
+      Params: 3,975,813/11,038,171 trainable/total
+
+--- K=100 ---
+    → Added 20 augmented samples for Class 2
+    → Added 20 augmented samples for Class 4
+  Train samples: 540 (K=100 base + augmented)
+✓ Loaded pretrained classifier weights (except last layer) from /home/abdulh/scratch/seizure_clf_20260226_083908/best_classifier.pth
+✓ Replaced last classifier layer for 5-class output at index 8
+  → Early stop at epoch 16 (no improvement for 15 epochs)
+  ❌ Accuracy: 0.5080, F1: 0.3655 (target ≥ 0.6)
+      Params: 3,975,813/11,038,171 trainable/total
+      Per-class F1: ['0.682', '0.013', '0.161', '0.028', '0.133']
+
+--- K=200 ---
+    → Added 20 augmented samples for Class 2
+    → Added 20 augmented samples for Class 4
+  Train samples: 1,040 (K=200 base + augmented)
+✓ Loaded pretrained classifier weights (except last layer) from /home/abdulh/scratch/seizure_clf_20260226_083908/best_classifier.pth
+✓ Replaced last classifier layer for 5-class output at index 8
+  → Early stop at epoch 24 (no improvement for 15 epochs)
+  ❌ Accuracy: 0.5446, F1: 0.4987 (target ≥ 0.6)
+      Params: 3,975,813/11,038,171 trainable/total
+      Per-class F1: ['0.695', '0.370', '0.246', '0.082', '0.171']
+
+--- K=250 ---
+    → Added 20 augmented samples for Class 2
+    → Added 20 augmented samples for Class 4
+  Train samples: 1,290 (K=250 base + augmented)
+✓ Loaded pretrained classifier weights (except last layer) from /home/abdulh/scratch/seizure_clf_20260226_083908/best_classifier.pth
+✓ Replaced last classifier layer for 5-class output at index 8
+  → Early stop at epoch 29 (no improvement for 15 epochs)
+  ❌ Accuracy: 0.5576, F1: 0.5251 (target ≥ 0.6)
+      Params: 3,975,813/11,038,171 trainable/total
+      Per-class F1: ['0.685', '0.471', '0.323', '0.058', '0.192']
+
+--- K=342 ---
+    → Added 20 augmented samples for Class 2
+    → Added 20 augmented samples for Class 4
+  Train samples: 1,750 (K=342 base + augmented)
+✓ Loaded pretrained classifier weights (except last layer) from /home/abdulh/scratch/seizure_clf_20260226_083908/best_classifier.pth
+✓ Replaced last classifier layer for 5-class output at index 8
+  → Early stop at epoch 94 (no improvement for 15 epochs)
+  ✅ Accuracy: 0.6564, F1: 0.6578 (target ≥ 0.6)
+      Params: 3,975,813/11,038,171 trainable/total
+      Per-class F1: ['0.741', '0.599', '0.471', '0.509', '0.424']
+
+
+======================================================================
+SUMMARY: F1-Score Target ≥ 0.6
+======================================================================
+
+Mode         K      Accuracy     F1-Score     Meets Target    Epochs  
+---------------------------------------------------------------------------
+frozen       10     0.3442       0.3604       ❌ no            44      
+frozen       50     0.3474       0.3433       ❌ no            19      
+frozen       100    0.5099       0.3690       ❌ no            16      
+frozen       200    0.5051       0.3868       ❌ no            18      
+frozen       250    0.5060       0.3760       ❌ no            16      
+frozen       342    0.5342       0.5075       ❌ no            63      
+unfrozen     10     0.4496       0.4287       ❌ no            21      
+unfrozen     50     0.5053       0.3642       ❌ no            16      
+unfrozen     100    0.5080       0.3655       ❌ no            16      
+unfrozen     200    0.5446       0.4987       ❌ no            24      
+unfrozen     250    0.5576       0.5251       ❌ no            29      
+unfrozen     342    0.6564       0.6578       ✅ YES           94      
+
+🏆 Best Result Meeting Target (F1 ≥ 0.6):
+   Mode: unfrozen | K: 342
+   Accuracy: 0.6564 | F1: 0.6578
+   Trainable params: 3,975,813
+
+📈 Overall Best F1 (any config):
+   Mode: unfrozen | K: 342
+   F1: 0.6578 | Accuracy: 0.6564
