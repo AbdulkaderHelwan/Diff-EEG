@@ -10,6 +10,17 @@ A diffusion-based EEG foundation model for seizure detection and seizure subtype
 
 ---
 
+## Pre-trained Models
+
+| Model | Task | Dataset | Download |
+|-------|------|---------|----------|
+| `best_EEGDIFF2.pth` | Diffusion backbone (pre-training) | THUSZ | [Download](https://lauedu74602-my.sharepoint.com/:u:/g/personal/abedelkader_helwan_lau_edu_lb/IQCvOrCk3Us8Sry9uUmBYtChAfJxYRlFvrFMA3Emr6fE8Wo?e=uszLoB) |
+| `best_classifier.pth` | Binary seizure detection (patient-wise) | THUSZ | [Download](https://lauedu74602-my.sharepoint.com/:u:/g/personal/abedelkader_helwan_lau_edu_lb/IQCvOrCk3Us8Sry9uUmBYtChAfJxYRlFvrFMA3Emr6fE8Wo?e=uszLoB) |
+| `best_classifier.pth` | Subtype classification (stratified 80/20) | THUSZ | [Download](https://lauedu74602-my.sharepoint.com/:u:/g/personal/abedelkader_helwan_lau_edu_lb/IQDRXFfhnCuGQJs_lNO04lyUARYXKbudopQsfIkVruAvABY?e=APlvQn) |
+| `kall_unfrozen_best.pth` | Binary detection (normal vs abnormal) | TUAB | [Download](https://lauedu74602-my.sharepoint.com/:u:/g/personal/abedelkader_helwan_lau_edu_lb/IQD16KHZFE-ITrMuAe5pGmzaAZdQq-pQ0JSt27KP5lrV8zk?e=Jk29JF) |
+
+---
+
 ## Quick Start: Fine-tuning the Pre-trained Model
 
 ### 1. Requirements
