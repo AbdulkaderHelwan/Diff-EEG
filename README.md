@@ -2,6 +2,10 @@
 
 A diffusion-based EEG foundation model for seizure detection and seizure subtype classification.
 
+## Model Architecture
+
+![Diff-EEG Architecture](diffeeg.png)
+
 ## Real-Time EEG Seizure Detection Demo
 
 [![Watch Demo](demo_thumbnail.jpg)](https://lauedu74602-my.sharepoint.com/:v:/g/personal/abedelkader_helwan_lau_edu_lb/IQCgcsNPtvqxQaqW0qzuG7H3AVjM_D_OXHeGq0VOvGOxLw0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=LbSSnz)
