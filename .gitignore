@@ -1,0 +1,10 @@
+# Checkpoints (keep only best model)
+checkpoint_epoch_*.pth
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+*.pth
