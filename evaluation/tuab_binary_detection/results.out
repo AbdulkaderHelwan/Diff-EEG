@@ -1,0 +1,52 @@
+Device: cuda
+Loading checkpoint: /home/abdulh/scratch/tuab_fewshot_rl_20260408_072502/kall_unfrozen_best.pth
+  Best epoch: 8, threshold: 0.5, mode: unfrozen
+Model initialized with 9,674,710 parameters
+Model loaded.
+
+test-normal: 38,931 samples
+test-seizure: 33,360 samples
+Total test samples: 72,291
+
+Running inference...
+  Batch 50/565
+  Batch 100/565
+  Batch 150/565
+  Batch 200/565
+  Batch 250/565
+  Batch 300/565
+  Batch 350/565
+  Batch 400/565
+  Batch 450/565
+  Batch 500/565
+  Batch 550/565
+
+======================================================================
+TEST RESULTS  (saved threshold = 0.5)
+======================================================================
+  Accuracy:      0.7956
+  F1:            0.7763
+  Precision:     0.7844
+  Sensitivity:   0.7684
+  Specificity:   0.8190
+  Balanced Acc:  0.7937
+  ROC-AUC:       0.8737
+  PR-AUC:        0.8731
+  False Alarms:  7046 (FAR=0.1810)
+  TP=25633  TN=31885  FP=7046  FN=7727
+
+======================================================================
+TEST RESULTS  (optimal threshold = 0.45)
+======================================================================
+  Accuracy:      0.7889
+  F1:            0.7770
+  Precision:     0.7582
+  Sensitivity:   0.7968
+  Specificity:   0.7822
+  Balanced Acc:  0.7895
+  ROC-AUC:       0.8737
+  PR-AUC:        0.8731
+  False Alarms:  8479 (FAR=0.2178)
+  TP=26581  TN=30452  FP=8479  FN=6779
+
+Results saved to /home/abdulh/scratch/tuab_fewshot_rl_20260408_072502/test_results.json
