@@ -10,12 +10,6 @@ What this script does:
 - Uses supervised weighted cross-entropy + policy-gradient RL auxiliary loss.
 
 Dataset: THUSZ (4 seizure subtypes)
-Results: Mean F1=0.591 ± 0.086, Mean Acc=0.607 ± 0.078 across 5 folds
-- Selects best model by validation weighted F1.
-- Uses 4 classes by removing the lowest-support subtype from candidate top-5.
-
-What it does NOT do:
-- No Phase 2 / no LOO evaluation / no TTA in this script.
 """
 
 import json
