@@ -37,7 +37,7 @@ pip install torch numpy scikit-learn tqdm matplotlib einops
 
 Download `best_EEGDIFF2.pth` from OneDrive and place it in the project root:
 
-> **[Download Pre-trained Model](https://lauedu74602-my.sharepoint.com/:u:/g/personal/abedelkader_helwan_lau_edu_lb/IQCvOrCk3Us8Sry9uUmBYtChAfJxYRlFvrFMA3Emr6fE8Wo?e=uszLoB)
+> **[Download Pre-trained Model](https://lauedu74602-my.sharepoint.com/:u:/g/personal/abedelkader_helwan_lau_edu_lb/IQBYthZPaCNrRojPoFJTI9I5AZp_6g5nnHqmxzMK1smpjKM?e=uSdVab)
 
 ### 3. Load the backbone
 
