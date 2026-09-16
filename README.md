@@ -1,6 +1,6 @@
 # Diff-EEG
 
-[A diffusion-based EEG foundation model for seizure detection and seizure subtype classification].
+DiffEEG: A Self-Supervised Denoising Diffusion Model for Learning EEG Generic Representations
 
 ## Model Architecture
 
