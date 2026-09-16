@@ -1,6 +1,6 @@
 # Diff-EEG
 
-A diffusion-based EEG foundation model for seizure detection and seizure subtype classification.
+[A diffusion-based EEG foundation model for seizure detection and seizure subtype classification].
 
 ## Model Architecture
 
